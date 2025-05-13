@@ -1,22 +1,27 @@
-// 1. Importamos React y el archivo CSS
 import React from 'react';
-import './curriculum.css'; // Asegúrate de crear este archivo en la misma carpeta
+import './curriculum.css'; // Importación de estilos CSS
 
-// 2. Definimos el componente como una función
+// --- Componente principal Curriculum (encapsulamiento) ---
+// Este componente encapsula todo el contenido del currículum vitae,
+// permitiendo que se reutilice fácilmente dentro de una aplicación React.
+
 const Curriculum = () => {
-  // 3. El contenido HTML va dentro del RETURN
+  
   return (
-    // 4. En React usamos className en lugar de class (div contenedor)
+    // --- Contenedor principal ---
     <div className="curriculum-container">
       
-      {/* --- HEADER --- */}
+      {/* --- HEADER (Inicio) --- */}
+      {/* Nodo de encabezado que contiene el nombre, correo, GitHub y teléfono del usuario */}
       <header>
         <h1>Jared Pérez Centeno</h1>
         <p>Emiliano Zapata | <a href="mailto:jared.pc.003@gmail.com">jared.pc.003@gmail.com</a> | GitHub: <a href="https://github.com/JaredPC3" target="_blank" rel="noopener noreferrer">JaredPC3</a></p>
         <p>Teléfono: 934-102-8371</p>
       </header>
+      {/* --- HEADER (Fin) --- */}
 
-      {/* --- EDUCACIÓN --- */}
+      {/* --- EDUCACIÓN (Inicio) --- */}
+      {/* Nodo que muestra la educación actual y previa del usuario */}
       <section className="education-section">
         <h2>Educación</h2>
         <p><strong>Universidad Juárez Autónoma de Tabasco (UJAT)</strong></p>
@@ -31,8 +36,10 @@ const Curriculum = () => {
           <li>Primaria - Completada</li>
         </ul>
       </section>
+      {/* --- EDUCACIÓN (Fin) --- */}
 
-      {/* --- PROYECTOS --- */}
+      {/* --- PROYECTOS (Inicio) --- */}
+      {/* Nodo que presenta proyectos personales y experiencias de voluntariado */}
       <section className="projects-section">
         <h2>Proyectos y Voluntariados</h2>
         <p><strong>Sistema Experto en Python</strong></p>
@@ -41,8 +48,10 @@ const Curriculum = () => {
         <p><strong>Investigación: Impacto de las Emociones en Estudiantes</strong></p>
         <p>Estudio de probabilidad y estadística sobre cómo las emociones afectan el rendimiento académico en DACyTI.</p>
       </section>
+      {/* --- PROYECTOS (Fin) --- */}
 
-      {/* --- HABILIDADES --- */}
+      {/* --- HABILIDADES (Inicio) --- */}
+      {/* Nodo donde se listan las habilidades del usuario, tanto técnicas como lingüísticas */}
       <section className="skills-section">
         <h2>Habilidades</h2>
         <ul>
@@ -51,14 +60,20 @@ const Curriculum = () => {
           <li>Español (nativo), Inglés (básico - 2 niveles en CELE)</li>
         </ul>
       </section>
+      {/* --- HABILIDADES (Fin) --- */}
 
-      {/* --- FOOTER --- */}
+      {/* --- FOOTER (Inicio) --- */}
+      {/* Nodo final que contiene información de derechos de autor */}
       <footer>
         <p>© 2025 - Jared Pérez Centeno</p>
       </footer>
+      {/* --- FOOTER (Fin) --- */}
+
     </div>
+    // --- Fin del contenedor principal ---
   );
 };
 
-// 5. Exportamos el componente para usarlo en App.js
+// --- Exportación del componente Curriculum ---
+// Esto permite importar y utilizar este componente en otras partes de la aplicación React.
 export default Curriculum;
